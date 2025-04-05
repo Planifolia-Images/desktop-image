@@ -1,0 +1,17 @@
+name: lock-pacman
+type: shell
+commands:
+  - lpkg --lock
+modules:
+  - name: blackbox-rescue
+    type: shell
+    commands:
+      - echo "\nActions=rescue;\n[Desktop Action rescue]\nName=Rescue Mode\nExec=blackbox-terminal -c /bin/bash\nIcon=com.raggesilver.BlackBox" >> /usr/share/applications/com.raggesilver.BlackBox.desktop
+  - name: cleanup
+    type: shell
+    commands:
+      - pacman -Rs --noconfirm base-devel
+  - name: sysconf-setup
+    type: shell
+    commands:
+      - rsync -a /etc/ /sysconf/

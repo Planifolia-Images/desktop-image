@@ -1,0 +1,63 @@
+name: Planifolia Desktop
+id: desktop
+
+stages:
+- id: build
+  base: ghcr.io/nisel11/core:main
+  singlelayer: false
+  labels:
+    maintainer: nisel11
+
+  modules:
+  - name: init-setup
+    type: shell
+    commands:
+    - echo 'PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"' > /etc/environment
+    - lpkg --unlock
+    - pacman -Syu --noconfirm
+    modules:
+      - name: vanilla-tools
+        type: shell
+        source:
+          type: tar
+          url: https://github.com/Vanilla-OS/vanilla-tools/releases/download/v1.0.0/vanilla-tools.tar.gz
+          checksum: 0e1d92d9c9154f9a115e97b40ff692afa52ddd0d9f770a8ec67440bf1a48aa72
+        commands:
+        - mkdir -p /usr/bin
+        - cp /sources/vanilla-tools/vanilla-tools/cur-gpu /usr/bin/cur-gpu
+        - chmod +x /usr/bin/cur-gpu
+
+  - name: packages-modules
+    type: includes
+    includes:
+      - modules/00-vanilla-system-operator.yml
+      - modules/01-packages.yml
+      - modules/02-fswarn.yml
+      - modules/03-nautilus-terminal-rightclick.yml
+      - modules/04-plymouth-theme-vanilla.yml
+      - modules/05-gnome-software-vso-plugin.yml
+      - modules/06-desktop-entries.yml
+      - modules/07-services.yml
+      - modules/08-ensure-exec-hooks.yml
+      - modules/09-configure.yml
+
+  - name: fsguard
+    type: fsguard
+    CustomFsGuard: false
+    FsGuardLocation: "/usr/sbin/FsGuard"
+    GenerateKey: true
+    FilelistPaths: ["/usr/bin"]
+    modules:
+      - name: remove-prev-fsguard
+        type: shell
+        commands:
+          - rm -rf /FsGuard
+          - rm -f ./minisign.pub ./minisign.key
+          - chmod +x /usr/share/init.d/010-fsguard.sh
+
+  - name: cleanup2
+    type: shell
+    commands:
+      - rm -rf /tmp/*
+      - rm -rf /var/tmp/*
+      - rm -rf /sources
