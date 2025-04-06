@@ -11,6 +11,10 @@ modules:
     type: shell
     commands:
       - pacman -R --noconfirm sudo
+  - name: remove-sockets-files
+    type: shell
+    commands:
+      - rm -f /etc/pacman.d/gnupg/S.*
   - name: sysconf-setup
     type: shell
     commands:
