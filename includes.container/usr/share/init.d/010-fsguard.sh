@@ -37,7 +37,7 @@ function failed() {
     fi
 }
 
-/usr/sbin/FsGuard verify "/.system/FsGuard/filelist"
+/usr/libexec/FsGuard verify "/.system/FsGuard/filelist"
 if [[ $? -ne 0 ]]; then
     failed
 fi

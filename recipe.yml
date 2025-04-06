@@ -43,7 +43,7 @@ stages:
   - name: fsguard
     type: fsguard
     CustomFsGuard: false
-    FsGuardLocation: "/usr/sbin/FsGuard"
+    FsGuardLocation: "/usr/libexec/FsGuard"
     GenerateKey: true
     FilelistPaths: ["/usr/bin"]
     modules:
@@ -58,5 +58,6 @@ stages:
     type: shell
     commands:
       - rm -rf /tmp/*
+      - rm -rf /var/cache/*
       - rm -rf /var/tmp/*
       - rm -rf /sources
