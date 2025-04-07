@@ -6,4 +6,4 @@ modules:
   - name: add-plymouth-hook
     type: shell
     commands:
-      - sed -i "s|base udev btrfs|base udev plymouth btrfs|g" /etc/mkinitcpio.conf
+      - echo -e '\nadd_dracutmodules+=" plymouth "\n' >> /usr/share/planifolia/dracut.conf.d/planifolia.conf
