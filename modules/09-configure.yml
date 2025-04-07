@@ -7,10 +7,6 @@ modules:
     type: shell
     commands:
       - echo "\nActions=rescue;\n[Desktop Action rescue]\nName=Rescue Mode\nExec=blackbox-terminal -c /bin/bash\nIcon=com.raggesilver.BlackBox" >> /usr/share/applications/com.raggesilver.BlackBox.desktop
-  - name: remove-sudo
-    type: shell
-    commands:
-      - pacman -R --noconfirm sudo
   - name: remove-sockets-files
     type: shell
     commands:
