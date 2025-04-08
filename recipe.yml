@@ -34,17 +34,16 @@ stages:
       - modules/02-fswarn.yml
       - modules/03-gnome.yml
       - modules/04-gnome-essentials.yml
-      - modules/05-nautilus-terminal-rightclick.yml
-      - modules/06-plymouth.yml
-      - modules/07-fonts.yml
-      - modules/08-printers.yml
-      - modules/09-graphics.yml
-      - modules/10-media.yml
-      - modules/11-gnome-software-vso-plugin.yml
-      - modules/12-desktop-entries.yml
-      - modules/13-services.yml
-      - modules/14-ensure-exec-hooks.yml
-      - modules/15-configure.yml
+      - modules/05-plymouth.yml
+      - modules/06-fonts.yml
+      - modules/07-printers.yml
+      - modules/08-graphics.yml
+      - modules/09-media.yml
+      - modules/10-gnome-software-vso-plugin.yml
+      - modules/11-desktop-entries.yml
+      - modules/12-services.yml
+      - modules/13-ensure-exec-hooks.yml
+      - modules/14-configure.yml
 
   - name: fsguard
     type: fsguard

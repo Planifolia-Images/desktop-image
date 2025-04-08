@@ -1,9 +1,0 @@
-name: printers
-type: pacman
-packages:
-- cups
-- cups-pk-helper
-- cups-filters
-- bluez-cups
-- hplip
-- system-config-printer
