@@ -45,7 +45,7 @@ stages:
     CustomFsGuard: false
     FsGuardLocation: "/usr/libexec/FsGuard"
     GenerateKey: true
-    FilelistPaths: ["/usr"]
+    FilelistPaths: ["/usr/bin"]
     modules:
       - name: remove-prev-fsguard
         type: shell
