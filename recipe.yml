@@ -30,15 +30,21 @@ stages:
     type: includes
     includes:
       - modules/00-vanilla-system-operator.yml
-      - modules/01-packages.yml
+      - modules/01-vanilla-apps.yml
       - modules/02-fswarn.yml
-      - modules/03-nautilus-terminal-rightclick.yml
-      - modules/04-plymouth-theme-vanilla.yml
-      - modules/05-gnome-software-vso-plugin.yml
-      - modules/06-desktop-entries.yml
-      - modules/07-services.yml
-      - modules/08-ensure-exec-hooks.yml
-      - modules/09-configure.yml
+      - modules/03-gnome.yml
+      - modules/04-gnome-essentials.yml
+      - modules/05-nautilus-terminal-rightclick.yml
+      - modules/06-plymouth.yml
+      - modules/07-fonts.yml
+      - modules/08-printers.yml
+      - modules/09-graphics.yml
+      - modules/10-media.yml
+      - modules/11-gnome-software-vso-plugin.yml
+      - modules/12-desktop-entries.yml
+      - modules/13-services.yml
+      - modules/14-ensure-exec-hooks.yml
+      - modules/15-configure.yml
 
   - name: fsguard
     type: fsguard

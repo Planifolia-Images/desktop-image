@@ -1,0 +1,25 @@
+name: vanilla-apps
+type: pacman
+packages:
+  - apx-gui
+  - vanilla-backgrounds
+  - desktop-base
+  - first-setup
+  - vanilla-gnome-default-settings
+  - vanilla-prime-utility
+  - vanilla-sideload-utility
+  - vanilla-tour
+  - vanilla-updates-utility
+  - abroot-rollback-notifier
+  - adwdialog-git
+modules:
+  - name: planifolia-repo
+    type: shell
+    commands:
+      - sed -i '/^#\[core-testing\]/i [planifolia]\nSigLevel = Never\nServer = https:\/\/planifolia-images.github.io\/pkgbuild\/repo/\n' /etc/pacman.conf
+  - name: set-mimetype
+    type: shell
+    commands:
+    - mkdir -p /etc/skel/.config
+    - printf '[Default Applications]\n' > /etc/skel/.config/mimeapps.list
+    - printf 'application/vnd.debian.binary-package=org.vanillaos.Sideload.desktop\n' >> /etc/skel/.config/mimeapps.list

@@ -1,0 +1,44 @@
+name: gnome
+type: pacman
+packages:
+  - gdm
+  - gnome-session
+  - gnome-shell
+  - gnome-shell-extensions
+  - gnome-browser-connector
+  - dbus
+  - gnome-bluetooth-3.0
+  - gnome-color-manager
+  - gnome-menus
+  - gnome-online-accounts
+  - nautilus
+  - nautilus-share
+  - nautilus-python
+  - geoclue
+  - gjs
+  - mutter
+  - xdg-desktop-portal
+  - xdg-desktop-portal-gnome
+  - xdg-desktop-portal-gtk
+  - gnome-control-center
+  - evolution-data-server
+  - blackbox-terminal
+  - ddcutil # For brightness control extension
+  - adwaita-icon-theme
+  - gnome-backgrounds
+  - gnome-themes-extra
+  - power-profiles-daemon
+  - switcheroo-control
+  - glib2
+  - glib-networking
+  - pam
+  - gnome-remote-desktop
+  - gnome-user-share
+  - gnome-keyring
+  - gnome-disk-utility
+  - gnome-system-monitor
+  - sushi
+  - gnome-software
+  - ghostscript
+  - zenity
+  - flatpak

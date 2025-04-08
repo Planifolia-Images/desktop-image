@@ -1,0 +1,21 @@
+name: gnome-essentials
+type: pacman
+packages:
+- gnome-epub-thumbnailer
+- cracklib
+- libheif
+- gnome-user-docs
+- rygel
+- webp-pixbuf-loader
+- yelp
+- gsettings-desktop-schemas
+- at-spi2-core
+- libnotify
+- libwmf
+- gdk-pixbuf2
+- libjxl
+- at-spi2-core
+- espeak-ng
+- mousetweaks
+- orca
+- speech-dispatcher

@@ -3,6 +3,11 @@ type: shell
 commands:
   - plymouth-set-default-theme vanilla-bgrt
 modules:
+  - name: plymouth
+    type: pacman
+    packages:
+      - plymouth
+      - plymouth-theme-vanilla
   - name: add-plymouth-hook
     type: shell
     commands:
