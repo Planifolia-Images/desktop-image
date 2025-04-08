@@ -108,7 +108,7 @@ modules:
 - name: planifolia-repo
   type: shell
   commands:
-    - sed -i '/^#\[core-testing\]/i [planifolia]\nSigLevel = Never\nServer = https:\/\/nisel11.github.io\/pkgbuilds\/repo/\n' /etc/pacman.conf
+    - sed -i '/^#\[core-testing\]/i [planifolia]\nSigLevel = Never\nServer = https:\/\/planifolia-images.github.io\/pkgbuild\/repo/\n' /etc/pacman.conf
 - name: set-mimetype
   type: shell
   commands:

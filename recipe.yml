@@ -3,7 +3,7 @@ id: desktop
 
 stages:
 - id: build
-  base: ghcr.io/nisel11/core:main
+  base: ghcr.io/planifolia-images/core:main
   singlelayer: false
   labels:
     maintainer: nisel11
