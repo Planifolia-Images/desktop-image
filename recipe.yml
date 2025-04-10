@@ -1,0 +1,37 @@
+name: Planifolia Desktop
+id: desktop
+
+stages:
+- id: build
+  base: ghcr.io/planifolia-images/desktop:main
+  singlelayer: false
+  labels:
+    maintainer: nisel11
+
+  modules:
+  - name: packages-modules
+    type: includes
+    includes:
+      - modules/00-dev-abroot.yml
+
+  - name: fsguard
+    type: fsguard
+    CustomFsGuard: false
+    FsGuardLocation: "/usr/libexec/FsGuard"
+    GenerateKey: true
+    FilelistPaths: ["/usr/bin"]
+    modules:
+      - name: remove-prev-fsguard
+        type: shell
+        commands:
+          - rm -rf /FsGuard
+          - rm -f ./minisign.pub ./minisign.key
+          - chmod +x /usr/share/init.d/010-fsguard.sh
+
+  - name: cleanup2
+    type: shell
+    commands:
+      - rm -rf /tmp/*
+      - rm -rf /var/cache/*
+      - rm -rf /var/tmp/*
+      - rm -rf /sources
