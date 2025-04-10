@@ -1,0 +1,17 @@
+name: gnome-essentials
+type: pacman
+packages:
+  - kio-admin
+  - kio-admin
+  - kio-extras
+  - kio-fuse
+  - kio-gdrive
+  - dolphin-plugins
+  - kdeconnect
+  - kpipewire
+  - partitionmanager
+  - at-spi2-core
+  - espeak-ng
+  - mousetweaks
+  - orca
+  - speech-dispatcher

@@ -8,6 +8,7 @@ modules:
     packages:
       - plymouth
       - plymouth-theme-vanilla
+      - plymouth-kcm
   - name: add-plymouth-hook
     type: shell
     commands:

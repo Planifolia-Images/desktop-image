@@ -1,0 +1,15 @@
+name: gnome
+type: pacman
+packages:
+  - plasma-meta
+  - sddm-kcm
+  - dbus
+  - xdg-desktop-portal
+  - blackbox-terminal
+  - ddcutil
+  - power-profiles-daemon
+  - switcheroo-control
+  - ghostscript
+  - zenity
+  - flatpak
+  - flatpak-kcm

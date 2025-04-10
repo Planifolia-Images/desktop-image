@@ -2,11 +2,10 @@ name: enable-services
 type: shell
 commands:
   - systemctl enable cups.path
-  - systemctl enable gdm.service
+  - systemctl enable sddm.service
   - systemctl enable accounts-daemon.service
   - systemctl enable apparmor.service
   - systemctl enable cups.service
-  - systemctl enable gnome-remote-desktop.service
   - systemctl enable power-profiles-daemon.service
   - systemctl enable switcheroo-control.service
   - systemctl enable systemd-zram-setup@zram0.service

@@ -1,4 +1,4 @@
-name: Planifolia Desktop
+name: Planifolia Plasma Desktop
 id: desktop
 
 stages:
@@ -32,18 +32,17 @@ stages:
       - modules/00-vanilla-system-operator.yml
       - modules/01-vanilla-apps.yml
       - modules/02-fswarn.yml
-      - modules/03-gnome.yml
-      - modules/04-gnome-essentials.yml
+      - modules/03-plasma.yml
+      - modules/04-plasma-essentials.yml
       - modules/05-plymouth.yml
       - modules/06-fonts.yml
       - modules/07-printers.yml
       - modules/08-graphics.yml
       - modules/09-media.yml
-      - modules/10-gnome-software-vso-plugin.yml
-      - modules/11-desktop-entries.yml
-      - modules/12-services.yml
-      - modules/13-ensure-exec-hooks.yml
-      - modules/14-configure.yml
+      - modules/10-desktop-entries.yml
+      - modules/11-services.yml
+      - modules/12-ensure-exec-hooks.yml
+      - modules/13-configure.yml
 
   - name: fsguard
     type: fsguard
