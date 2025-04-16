@@ -6,4 +6,5 @@ packages:
   - vulkan-radeon
   - vulkan-mesa-layers
   - libvdpau
-  - apparmor # Legends say it came here from dark matter 👀
+  - apparmor  # Legends say it came here from dark matter 👀
+  - acpi_call # No one know why it's exist here
