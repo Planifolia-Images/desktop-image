@@ -20,3 +20,9 @@ packages:
   - orca
   - speech-dispatcher
   - nautilus-open-any-terminal
+modules:
+  - name: enable-services
+    type: shell
+    commands:
+      - systemctl enable gdm
+      - systemctl enable gnome-remote-desktop

@@ -1,0 +1,19 @@
+name: lock-pacman
+type: shell
+commands:
+  - lpkg --lock
+modules:
+  - name: verify-integrity
+    type: shell
+    commands:
+      - chmod +x /usr/lib/planifolia/verify-integrity.sh # Ensure executable
+      - systemctl enable fsguard-verify-integrity        # Enable service
+  - name: blackbox-rescue
+    type: shell
+    commands:
+      - echo "\nActions=rescue;\n[Desktop Action rescue]\nName=Rescue Mode\nExec=blackbox-terminal -c /bin/bash\nIcon=com.raggesilver.BlackBox" >> /usr/share/applications/com.raggesilver.BlackBox.desktop
+
+  - name: sysconf-setup
+    type: shell
+    commands:
+      - rsync -a /etc/ /sysconf/

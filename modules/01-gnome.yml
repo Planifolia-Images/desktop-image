@@ -12,8 +12,6 @@ packages:
   - gnome-menus
   - gnome-online-accounts
   - nautilus
-  - nautilus-share
-  - nautilus-python
   - geoclue
   - gjs
   - mutter
@@ -23,7 +21,7 @@ packages:
   - gnome-control-center
   - evolution-data-server
   - blackbox-terminal
-  - ddcutil # For brightness control extension
+  - ddcutil # For brightness control extensions
   - adwaita-icon-theme
   - gnome-backgrounds
   - gnome-themes-extra
