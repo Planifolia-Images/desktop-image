@@ -3,11 +3,11 @@ type: shell
 commands:
   - lpkg --lock
 modules:
-  - name: verify-integrity
+  - name: ensure-initd-executable
     type: shell
     commands:
-      - chmod +x /usr/lib/planifolia/verify-integrity.sh # Ensure executable
-      - systemctl enable fsguard-verify-integrity        # Enable service
+      - chmod +x /usr/share/init.d/010-fsguard.sh
+
   - name: blackbox-rescue
     type: shell
     commands:
